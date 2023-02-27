@@ -1,6 +1,6 @@
 .PHONY: clean api all
 
-all: clean api
+all: clean api 
 
 clean:
 	rm edged.db

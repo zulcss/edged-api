@@ -23,4 +23,6 @@ func GetRoutes(router *gin.Engine) {
 
 	// Root
 	AddRootGroup(v1)
+	// Site
+	AddSiteGroup(v1)
 }
