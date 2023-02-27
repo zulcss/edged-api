@@ -1,10 +1,12 @@
-.PHONY: clean api all
+.PHONY: clean api all client
 
-all: clean api 
+all: clean api client
 
 clean:
-	rm edged.db
 	rm -rf bin
 
 api:
 	go build -o bin/edged apiserver/main.go
+
+client:
+	go build -o bin/stx client/main.go
