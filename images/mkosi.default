@@ -1,0 +1,19 @@
+[Distribution]
+distribution=debian
+release=bookworm
+
+[Ouptut]
+hostname=localhost
+format=gpt_btrfs
+Compress=zstd
+bootable=true
+output=image.raw
+
+[Contents]
+WithNetwork=yes
+autologin=true
+Packages=
+	vim
+	procps
+	golang
+	systemd-container
