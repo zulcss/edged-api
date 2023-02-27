@@ -15,8 +15,11 @@ func InitDatabase() {
 		panic("Failed to open database")
 	}
 
-	// cluster
+	// cluster table
 	database.AutoMigrate(&Cluster{})
+
+	// site table
+	database.AutoMigrate(&Site{})
 
 	DB = database
 }
