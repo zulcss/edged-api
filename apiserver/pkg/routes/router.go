@@ -1,7 +1,12 @@
 package routes
 
 import (
+	"fmt"
+
 	"github.com/gin-gonic/gin"
+
+	"github.com/spf13/viper"
+	"github.com/zulcss/edged/apiserver/pkg/constants"
 )
 
 
@@ -10,7 +15,7 @@ func Run() {
 	router := gin.Default()
 
 	GetRoutes(router)
-	router.Run(":8080")
+	router.Run(fmt.Sprintf("%s:%s", viper.GetString("host.server"), constants.Port))
 }
 
 func GetRoutes(router *gin.Engine) {
