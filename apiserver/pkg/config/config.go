@@ -4,11 +4,12 @@ import (
 	"github.com/spf13/viper"
 )
 
-func ReadConfig(Config string) {
-	viper.SetConfigName("edged.conf")
-	viper.AddConfigPath("etc")
+func ReadConfig(ConfigFile string) {
+	viper.SetConfigFile(ConfigFile)
+
+	viper.SetConfigType("yaml")
 	err := viper.ReadInConfig()
 	if err != nil {
-		panic("Failed to read configuration file")
+		panic(err)
 	}
 }

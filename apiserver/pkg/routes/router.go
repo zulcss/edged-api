@@ -1,13 +1,11 @@
 package routes
 
 import (
-	"log"
 	"github.com/gin-gonic/gin"
 )
 
 
 func Run() {
-	log.Printf("Running edged")
 	gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
 
