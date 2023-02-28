@@ -5,6 +5,11 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var (
+	Endpoint	string
+)
+
+
 var rootCmd = &cobra.Command{
 	Use:	"stx",
 	Short:	"edged rest-api client",
@@ -17,4 +22,6 @@ func Execute() {
 	}
 }
 
-func init() {}
+func init() {
+	rootCmd.PersistentFlags().StringVarP(&Endpoint, "endpoint", "E", "localhost", "Rest-API endpoint")
+}
