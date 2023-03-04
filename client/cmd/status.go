@@ -3,6 +3,8 @@ package cmd
 import (
 	"fmt"
 	"github.com/spf13/cobra"
+	
+	"github.com/zulcss/edged/client/pkg/client"
 )
 
 var statusCmd = &cobra.Command{
@@ -12,7 +14,9 @@ var statusCmd = &cobra.Command{
 }
 
 func RunStatus(cmd *cobra.Command, args[]string) {
-	fmt.Println("test")
+	c := client.NewClient(Endpoint)
+	node, _ := c.Status()
+	fmt.Println("Server status is: ", node.Status)
 }
 
 func init() {

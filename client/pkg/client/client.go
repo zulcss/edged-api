@@ -1,17 +1,19 @@
-package cli
+package client
 
 import (
 	"fmt"
-	"github.com/dghubble/sling"
-
+	"github.com/imroc/req/v3"
 	"github.com/zulcss/edged/shared/constants"
 )
 
 type Client struct {
-	sling	*sling.Sling
+	*req.Client
+	Host string
 }
 
-func NewClient(host string) {
-	var EdgedAPI = fmt.Sprintf("%s:%s%s",host, constants.Port, constants.EndPoint)
-	fmt.Println(EdgedAPI)
+func NewClient(host string) *Client {
+	return &Client{
+		Client: req.C(),
+		Host: fmt.Sprintf("http://%s:%s%s",host, constants.Port, constants.EndPoint),
+	}
 }
