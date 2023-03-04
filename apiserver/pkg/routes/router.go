@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"github.com/spf13/viper"
-	"github.com/zulcss/edged/apiserver/pkg/constants"
+	"github.com/zulcss/edged/shared/constants"
 )
 
 

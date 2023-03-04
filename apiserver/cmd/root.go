@@ -10,7 +10,7 @@ import (
 	"github.com/zulcss/edged/apiserver/pkg/routes"
 	"github.com/zulcss/edged/apiserver/pkg/db"
 	"github.com/zulcss/edged/apiserver/pkg/config"
-	"github.com/zulcss/edged/apiserver/pkg/constants"
+	"github.com/zulcss/edged/shared/constants"
 
 )
 

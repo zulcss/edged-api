@@ -54,6 +54,5 @@ func init() {
 	siteCmd.AddCommand(siteGetCmd)
 
 	// Site flags
-	rootCmd.PersistentFlags().StringVarP(&Site, "site", "s", "", "Site to add")
-	
+	rootCmd.PersistentFlags().StringVarP(&Site, "site", "s", "", "Site to add")	
 }
