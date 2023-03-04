@@ -1,17 +1,18 @@
 package cmd
 
 import (
-	"github.com/zulcss/edged/client/internal/cli"
-
+	"fmt"
 	"github.com/spf13/cobra"
 )
 
 var statusCmd = &cobra.Command{
 	Use:	"status",
 	Short:	"Check the status of the server",
-	Run: func(cmd *cobra.Command, args []string) {
-		cli.NewClient(Endpoint)
-	},
+	Run: RunStatus,
+}
+
+func RunStatus(cmd *cobra.Command, args[]string) {
+	fmt.Println("test")
 }
 
 func init() {
