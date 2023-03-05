@@ -15,7 +15,8 @@ func (c *Client) Status() (*NodeInfo, error) {
 
 	_, err := c.R().
 			SetSuccessResult(&node).
-			Get(fmt.Sprintf("%s/health", c.Host))
+			Get(fmt.Sprintf("%s/", c.Host))
 	
 	return node, err
 }
+
